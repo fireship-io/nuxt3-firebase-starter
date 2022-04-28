@@ -2,7 +2,7 @@
 
 A minimal demo of Nuxt3 + Firebase v9 demonstrating SSR Firestore data hydrated to realtime data on the client.
 
-Watch the full [Nuxt3 Firebase tutorial]()
+Watch the full [Nuxt3 Firebase tutorial](https://fireship.io/lessons/nuxt-3-firebase)
 
 ## Usage
 
