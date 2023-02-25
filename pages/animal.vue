@@ -7,9 +7,10 @@
     // Client Side
     const clientData = ref({})
 
+    const { firestore } = useFirebase();
+    const docRef = doc(firestore, `animals`, 'dog');
+
     onMounted(async() => {
-        const { firestore } = useFirebase();
-        const docRef = doc(firestore, `animals`, 'dog');
         onSnapshot(docRef, (snap) => {
             clientData.value = snap.data();
             // serverData.value = snap.data();
@@ -17,8 +18,6 @@
     });
 
     const updateAnimal = async() => {
-        const { firestore } = useFirebase();
-        const docRef = doc(firestore, `animals`, 'dog');
         await updateDoc(docRef, {
             age: Math.floor(Math.random() * 1000),
         });
